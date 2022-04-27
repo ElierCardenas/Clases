@@ -6,13 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <title>My Site</title>
+    <title>My Perros</title>
+    <link href="carousel.css" rel="stylesheet">
+
   </head>
+  <head>
+    <style>
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    div.contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+    div.contenedor > div {
+    width: 50%;
+    }
+    </style>
   <body>
- 
+
     <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">My page</a>
+        <a class="navbar-brand" href="#">My Perros</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,57 +55,106 @@
         <div class="collapse navbar-collapse" id="navbarsExample02">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
+              <a class="nav-link active" aria-current="page" href="/contacto.html">Contacto</a>
             </li>
           </ul>
           <form>
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control" type="text" placeholder="Esto no sirve" aria-label="Search">
           </form>
         </div>
       </div>
     </nav>
 
 
-    <div class="container">  
-      <form action="#" method="post">
-          <h2>Contactanos</h2>
-          <label for="">Inversionista</label>
-          <input type="radio" name="contacto" id="Inversionista"><br>
-          <label for="">Pyme</label>
-          <input type="radio" name="contacto" id="Pyme"><br>
-          <!-- <label for="">Ingrese su RUN</label> -->
-          <label for="">RUT</label>
-          <input type="text" name="run" id="run" placeholder="Ingrese su RUN" required><br>
-          <label for="">Email</label>
-          <input type="email" name="email" id="email" placeholder="Ingresa tu correo formato example@email.com" required><br>
-          <label for="">Fecha de Nacimiento</label>
-          <input type="date" name="" id="" ><br>
-          <label for="">Color Favorito</label>
-          <input type="color" name="color" id="color" ><br>
-          </select>
-          <br><br>
-          <input type="submit" value="Enviar Datos">
-        <br>
-        </form>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/Assets/img/_107435681_perro1.jpg" height="720" width="1280" class="d-block w-100" alt="...">
+  
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Perro feo.</h1>
+              <p>Este es un perro feo.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/Assets/img/purina-por-que-los-perros-mueven-la-cola.png" height="720" width="1280" class="d-block w-100" alt="...">
+  
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Perro feo 2.</h1>
+              <p>Este es otro perro feo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/Assets/img/mascotas-alimentacion-perros_529458667_162988306_1706x960.jpg" height="720" width="1280" class="d-block w-100" alt="...">
+  
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Peero feo 3.</h1>
+              <p>Este es otro perro feo mas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>   
+    
+<div>
+  <div class="container">
+    <h1>gallery</h1>
+    <div class="contenedor">
+      <a target="_blank" href="/Assets/img/peropega.webp">
+        <img src="/Assets/img/peropega.webp" alt="perro pega" width="500" height="500">
+      </a>
+      <div class="desc">Imagen del legendario "perro pega". Perdon profe por lo feo de la galeria :(</div>
+    </div>
+
+    <div class="contenedor">
+      <a target="_blank" href="ff">
+        <img src="/Assets/img/perro32.webp" alt="perroX" width="500" height="500">
+      </a>
+      <div class="desc">Imagen de un perro cualquiera"</div>
+    </div>
+
+    <div class="contenedor">
+      <a target="_blank" href="ff">
+        <img src="/Assets/img/perro-1.webp" alt="perroX" width="500" height="500">
+      </a>
+      <div class="desc">Imagen de un perro cualquiera"</div>
+    </div>
 
 
-      <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <p class="col-md-4 mb-0 text-muted">&copy; 2022 Inacap</p>
-      
-          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-          </a>
-      
-          <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre Nosotros</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About Us (again XD)</a></li>
-          </ul>
-        </footer>
-      </div>
+</div>
+
+
+    <div class="footer">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2022 Inacap</p>
+    
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        </a>
+    
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="/contacto.html" class="nav-link px-2 text-muted">Contacto</a></li>
+        </ul>
+      </footer>
+    </div>
   </body>
 </html>
